@@ -1,6 +1,6 @@
 import torch
 from pathlib import Path
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 
 def train_epochs(model, loader, dev_loader, optimize, criterion, device, epochs: int=10, checkpoint_path="checkpoints/best_model.pth"):
     checkpoint_path = Path(checkpoint_path)
@@ -19,8 +19,8 @@ def train_epochs(model, loader, dev_loader, optimize, criterion, device, epochs:
             loss.backward()
             optimize.step()
 
-        dev_f1 = evaluation(model, dev_loader, device)
-        print(f"Epoch {epoch + 1}/{epochs} | Dev F1: {dev_f1:.4f}")
+        dev_f1, dev_accuracy, dev_precision, dev_recall = evaluation(model, dev_loader, device)
+        print(f'f1: {dev_f1} | precision: {dev_precision} | recall: {dev_recall} | accuracy: {dev_accuracy}')
 
         if dev_f1 > best_f1:
             best_f1 = dev_f1
@@ -48,4 +48,7 @@ def evaluation(model, loader, device):
         truth += yb.tolist()
 
     f1 = f1_score(truth, preds, average='macro')
-    return f1
+    accuracy = accuracy_score(truth, preds)
+    precision = precision_score(truth, preds, average="macro")
+    recall = recall_score(truth, preds, average="macro")
+    return f1, accuracy, precision, recall
