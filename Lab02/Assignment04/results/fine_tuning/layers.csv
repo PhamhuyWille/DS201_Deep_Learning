@@ -1,0 +1,4 @@
+﻿layer,output,parameters
+Backbone (ResNet-50),2048x1x1,23508032
+Flatten,2048,0
+Classifier,21,43029

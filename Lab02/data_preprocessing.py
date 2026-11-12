@@ -2,7 +2,8 @@ from torchvision import transforms, datasets
 from torch.utils.data import random_split, DataLoader
 import torch
 
-def processing(train_dir: str = './dataset/train', test_dir: str='./dataset/test'):
+def processing(train_dir: str = './dataset/train', test_dir: str='./dataset/test', seed: int=42, batch_size: int=64):
+
     transform = transforms.Compose([
         transforms.Resize((64, 64)),
         transforms.ToTensor(),
@@ -21,12 +22,12 @@ def processing(train_dir: str = './dataset/train', test_dir: str='./dataset/test
     train, dev = random_split(
         train_set,
         [n_train, n_dev],
-        generator=torch.Generator().manual_seed(42)
+        generator=torch.Generator().manual_seed(seed)
     )
 
-    train_loader = DataLoader(train, batch_size=64, shuffle=True)
-    valid_loader = DataLoader(dev, batch_size=64, shuffle=True)
-    test_loader = DataLoader(test, batch_size=64, shuffle=True)
+    train_loader = DataLoader(train, batch_size=batch_size, shuffle=True)
+    valid_loader = DataLoader(dev, batch_size=batch_size, shuffle=True)
+    test_loader = DataLoader(test, batch_size=batch_size, shuffle=True)
 
     print('Preprocessing: DONE')
     return train_loader, valid_loader, test_loader

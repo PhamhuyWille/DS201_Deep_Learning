@@ -1,0 +1,2 @@
+﻿augmentation,parameters,best_epoch,best_val_f1,seconds_per_epoch,loss_divergence_epoch,accuracy,precision_macro,recall_macro,f1_macro
+no_aug,11187285,9,0.429187536323458,129.71642775999985,3,0.3909009278659084,0.398983411332051,0.39388995813233185,0.37041278757215723

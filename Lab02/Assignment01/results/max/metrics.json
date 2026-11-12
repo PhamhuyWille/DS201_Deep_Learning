@@ -1,0 +1,187 @@
+{
+  "summary": {
+    "pool": "max",
+    "parameters": 339421,
+    "best_epoch": 8,
+    "best_val_f1": 0.275685353274939,
+    "seconds_per_epoch": 164.8389223699982,
+    "accuracy": 0.24049685722837474,
+    "precision_macro": 0.25562246921622644,
+    "recall_macro": 0.22880146777497015,
+    "f1_macro": 0.22803049747694923
+  },
+  "config": {
+    "train_dir": "C:\\Users\\Huy\\Documents\\UIT\\Sem_5\\DS201\\Lab02\\dataset\\train",
+    "test_dir": "C:\\Users\\Huy\\Documents\\UIT\\Sem_5\\DS201\\Lab02\\dataset\\test",
+    "epochs": 10,
+    "pool": "max",
+    "batch_size": 64,
+    "lr": 0.001,
+    "seed": 42,
+    "output_dir": "C:\\Users\\Huy\\Documents\\UIT\\Sem_5\\DS201\\Lab02\\Assignment01\\results"
+  },
+  "classes": [
+    "banh-can",
+    "banh-hoi",
+    "banh-mi-chao",
+    "banh-tet",
+    "banh-trang-tron",
+    "banh-u",
+    "banh-uot",
+    "bap-nuong",
+    "bo-kho",
+    "bo-la-lot",
+    "bot-chien",
+    "ca-ri",
+    "canh-kho-qua",
+    "canh-khoai-mo",
+    "ga-nuong",
+    "goi-ga",
+    "ha-cao",
+    "hoanh-thanh-nuoc",
+    "pha-lau",
+    "tau-hu",
+    "thit-kho-trung"
+  ],
+  "classification_report": {
+    "banh-can": {
+      "precision": 0.12186379928315412,
+      "recall": 0.2821576763485477,
+      "f1-score": 0.1702127659574468,
+      "support": 241.0
+    },
+    "banh-hoi": {
+      "precision": 0.3032581453634085,
+      "recall": 0.3986820428336079,
+      "f1-score": 0.34448398576512457,
+      "support": 607.0
+    },
+    "banh-mi-chao": {
+      "precision": 0.17757009345794392,
+      "recall": 0.2629757785467128,
+      "f1-score": 0.21199442119944212,
+      "support": 289.0
+    },
+    "banh-tet": {
+      "precision": 0.1848341232227488,
+      "recall": 0.10714285714285714,
+      "f1-score": 0.1356521739130435,
+      "support": 364.0
+    },
+    "banh-trang-tron": {
+      "precision": 0.1683673469387755,
+      "recall": 0.10679611650485436,
+      "f1-score": 0.1306930693069307,
+      "support": 309.0
+    },
+    "banh-u": {
+      "precision": 0.20512820512820512,
+      "recall": 0.045454545454545456,
+      "f1-score": 0.07441860465116279,
+      "support": 176.0
+    },
+    "banh-uot": {
+      "precision": 0.2331288343558282,
+      "recall": 0.2714285714285714,
+      "f1-score": 0.2508250825082508,
+      "support": 560.0
+    },
+    "bap-nuong": {
+      "precision": 0.14130434782608695,
+      "recall": 0.09090909090909091,
+      "f1-score": 0.11063829787234042,
+      "support": 143.0
+    },
+    "bo-kho": {
+      "precision": 0.21327967806841047,
+      "recall": 0.3136094674556213,
+      "f1-score": 0.25389221556886227,
+      "support": 338.0
+    },
+    "bo-la-lot": {
+      "precision": 0.42755344418052255,
+      "recall": 0.3930131004366812,
+      "f1-score": 0.40955631399317405,
+      "support": 458.0
+    },
+    "bot-chien": {
+      "precision": 0.12839506172839507,
+      "recall": 0.18840579710144928,
+      "f1-score": 0.1527165932452276,
+      "support": 276.0
+    },
+    "ca-ri": {
+      "precision": 0.1885245901639344,
+      "recall": 0.13450292397660818,
+      "f1-score": 0.15699658703071673,
+      "support": 171.0
+    },
+    "canh-kho-qua": {
+      "precision": 0.4271186440677966,
+      "recall": 0.43448275862068964,
+      "f1-score": 0.4307692307692308,
+      "support": 290.0
+    },
+    "canh-khoai-mo": {
+      "precision": 0.908256880733945,
+      "recall": 0.5,
+      "f1-score": 0.6449511400651465,
+      "support": 198.0
+    },
+    "ga-nuong": {
+      "precision": 0.2,
+      "recall": 0.15591397849462366,
+      "f1-score": 0.17522658610271905,
+      "support": 372.0
+    },
+    "goi-ga": {
+      "precision": 0.1935483870967742,
+      "recall": 0.06206896551724138,
+      "f1-score": 0.09399477806788512,
+      "support": 290.0
+    },
+    "ha-cao": {
+      "precision": 0.22469135802469137,
+      "recall": 0.18958333333333333,
+      "f1-score": 0.20564971751412428,
+      "support": 480.0
+    },
+    "hoanh-thanh-nuoc": {
+      "precision": 0.19047619047619047,
+      "recall": 0.21666666666666667,
+      "f1-score": 0.20272904483430798,
+      "support": 240.0
+    },
+    "pha-lau": {
+      "precision": 0.15129151291512916,
+      "recall": 0.23295454545454544,
+      "f1-score": 0.18344519015659955,
+      "support": 352.0
+    },
+    "tau-hu": {
+      "precision": 0.4020618556701031,
+      "recall": 0.3842364532019704,
+      "f1-score": 0.3929471032745592,
+      "support": 203.0
+    },
+    "thit-kho-trung": {
+      "precision": 0.1774193548387097,
+      "recall": 0.033846153846153845,
+      "f1-score": 0.056847545219638244,
+      "support": 325.0
+    },
+    "accuracy": 0.24049685722837474,
+    "macro avg": {
+      "precision": 0.25562246921622644,
+      "recall": 0.22880146777497015,
+      "f1-score": 0.22803049747694923,
+      "support": 6682.0
+    },
+    "weighted avg": {
+      "precision": 0.25244577074919017,
+      "recall": 0.24049685722837474,
+      "f1-score": 0.2346857201435478,
+      "support": 6682.0
+    }
+  }
+}

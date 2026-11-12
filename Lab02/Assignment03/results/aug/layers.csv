@@ -1,0 +1,8 @@
+﻿layer,output,parameters
+stem,64x24x24,9536
+layer1,64x24x24,147968
+layer2,128x12x12,525568
+layer3,256x6x6,2099712
+layer4,512x3x3,8393728
+avgpool,512,0
+fc,21,10773

@@ -1,0 +1,8 @@
+﻿layer,output,parameters
+stem,64x16x16,19392
+inception1,56x16x16,7148
+inception2,112x16x16,22104
+pool,112x8x8,0
+inception3,192x8x8,47600
+globalpool,192x1x1,0
+classifier,21,4053

@@ -1,0 +1,4 @@
+﻿model,parameters,seconds_per_epoch,accuracy,f1_macro,status
+LeNet-5 (avg),339421,141.10312156569995,0.2584555522298713,0.23890235025583967,Matching recorded config
+LeNet-5 (max),339421,,,,Pending run
+GoogLeNet (3 Inception blocks),100297,139.34720079149992,0.28868602214905714,0.2711951041019153,Current run

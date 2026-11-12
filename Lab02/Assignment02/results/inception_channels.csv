@@ -1,0 +1,4 @@
+﻿block,formula,calculated_channels,actual_channels,parameters
+inception1,16 + 24 + 8 + 8,56,56,7148
+inception2,32 + 48 + 16 + 16,112,112,22104
+inception3,64 + 64 + 32 + 32,192,192,47600
