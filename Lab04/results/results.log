@@ -1,0 +1,159 @@
+PyTorch: 2.11.0+cu130 | device: cuda
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 1: loss=6.0212 dev_ROUGE-L=0.1300 BLEU=0.08
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 2: loss=5.7165 dev_ROUGE-L=0.1627 BLEU=0.54
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 3: loss=5.5260 dev_ROUGE-L=0.1766 BLEU=1.04
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 4: loss=5.3827 dev_ROUGE-L=0.1957 BLEU=1.23
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 5: loss=5.2735 dev_ROUGE-L=0.2009 BLEU=1.44
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 6: loss=5.1782 dev_ROUGE-L=0.2083 BLEU=1.62
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 7: loss=5.0960 dev_ROUGE-L=0.2117 BLEU=1.66
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 8: loss=5.0257 dev_ROUGE-L=0.2173 BLEU=1.90
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 9: loss=4.9613 dev_ROUGE-L=0.2263 BLEU=2.09
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+none epoch 10: loss=4.9010 dev_ROUGE-L=0.2308 BLEU=2.30
+Learning curves saved to: /kaggle/working/results/learning_curves.png
+none best epoch: 10
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+**************************************************
+Mode: none
+Rougel_f1: 0.23497751403798672
+RougeL_precision: 0.26152916094707634
+RougeL_recall: 0.2165033425005093
+Bleu: 2.6230520619044344
+Bleu_signature: nrefs:1|case:mixed|eff:no|tok:none|smooth:exp|version:2.6.0
+
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 1: loss=6.0672 dev_ROUGE-L=0.1234 BLEU=0.11
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 2: loss=5.7076 dev_ROUGE-L=0.1847 BLEU=1.05
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 3: loss=5.4163 dev_ROUGE-L=0.2064 BLEU=1.52
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 4: loss=5.2101 dev_ROUGE-L=0.2346 BLEU=2.18
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 5: loss=5.0454 dev_ROUGE-L=0.2399 BLEU=2.35
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 6: loss=4.9056 dev_ROUGE-L=0.2626 BLEU=3.21
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 7: loss=4.7807 dev_ROUGE-L=0.2689 BLEU=3.72
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 8: loss=4.6781 dev_ROUGE-L=0.2817 BLEU=4.13
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 9: loss=4.5816 dev_ROUGE-L=0.2935 BLEU=4.61
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+luong epoch 10: loss=4.4950 dev_ROUGE-L=0.3021 BLEU=4.94
+Learning curves saved to: /kaggle/working/results/learning_curves.png
+luong best epoch: 10
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+**************************************************
+Mode: luong
+Rougel_f1: 0.31640207617910504
+RougeL_precision: 0.3453753849389018
+RougeL_recall: 0.296064185593927
+Bleu: 6.092794352400813
+Bleu_signature: nrefs:1|case:mixed|eff:no|tok:none|smooth:exp|version:2.6.0
+
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 1: loss=6.0429 dev_ROUGE-L=0.1366 BLEU=0.13
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 2: loss=5.6560 dev_ROUGE-L=0.1896 BLEU=0.99
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 3: loss=5.3694 dev_ROUGE-L=0.2149 BLEU=1.71
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 4: loss=5.1609 dev_ROUGE-L=0.2378 BLEU=2.16
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 5: loss=4.9946 dev_ROUGE-L=0.2481 BLEU=2.77
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 6: loss=4.8546 dev_ROUGE-L=0.2662 BLEU=3.29
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 7: loss=4.7354 dev_ROUGE-L=0.2718 BLEU=3.86
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 8: loss=4.6380 dev_ROUGE-L=0.2846 BLEU=4.06
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 9: loss=4.5507 dev_ROUGE-L=0.2927 BLEU=4.48
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+bahdanau epoch 10: loss=4.4717 dev_ROUGE-L=0.2988 BLEU=4.61
+Learning curves saved to: /kaggle/working/results/learning_curves.png
+bahdanau best epoch: 10
+That's 100 lines that end in a tokenized period ('.')
+It looks like you forgot to detokenize your test data, which may hurt your score.
+If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.
+**************************************************
+Mode: bahdanau
+Rougel_f1: 0.3128352678572211
+RougeL_precision: 0.33834150684149256
+RougeL_recall: 0.295262450602143
+Bleu: 5.581708305291425
+Bleu_signature: nrefs:1|case:mixed|eff:no|tok:none|smooth:exp|version:2.6.0

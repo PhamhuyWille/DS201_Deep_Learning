@@ -4,7 +4,8 @@
 
 This repository documents my learning journey and hands-on practice in **DS201 - Deep Learning for Data Science**. It focuses on understanding neural networks through
 implementation and applying deep learning models to image classification,
-Vietnamese sentiment analysis, and named entity recognition.
+Vietnamese sentiment analysis, named entity recognition, and English-to-Vietnamese
+machine translation.
 
 ---
 
@@ -23,7 +24,9 @@ Vietnamese sentiment analysis, and named entity recognition.
   classification
 - Build recurrent models for Vietnamese sentiment analysis and named entity
   recognition
-- Evaluate model performance using classification and entity-level metrics
+- Compare LSTM encoder–decoder models with Luong and Bahdanau attention for
+  English-to-Vietnamese translation
+- Evaluate models using classification metrics, entity-level F1, ROUGE-L, and BLEU
 
 ---
 
@@ -98,11 +101,32 @@ Shared image preprocessing for Assignments 01 and 02 is implemented in
 
 ---
 
-## **(Update later)**
+### 🔹 Lab04 - Encoder–Decoder LSTM and Attention
+
+- Build English-to-Vietnamese translation models with a three-layer LSTM encoder
+  and decoder
+- Compare three configurations: no attention (`none`), Luong global-general
+  attention (`luong`), and Bahdanau additive attention (`bahdanau`)
+- Normalize text with Unicode NFC, lowercase, and whitespace tokenization;
+  keep sentence pairs with 1–50 tokens per language and build separate source
+  and target vocabularies from the filtered training set
+- Select checkpoints by dev ROUGE-L F1, breaking ties with dev negative
+  log-likelihood; reload the selected weights before test evaluation
+- Evaluate greedy translations using mean sentence ROUGE-L F1 and corpus BLEU
+  with SacreBLEU (`tokenize='none'`)
+- Training script: [`Lab04/src/main.py`](Lab04/src/main.py)
+- Notebooks: [Assignments](Lab04/assignments.ipynb) ·
+  [Demo](Lab04/Lab4_Demo.ipynb)
+- Results and analysis: [Lab04 report](Lab04/RESULTS.md) ·
+  [Training log](Lab04/results/results.log) ·
+  [Learning curves](Lab04/results/learning_curves.png)
+
+---
 
 ## 📊 Recorded Results
 
-These values come from the saved Lab02 reports and Lab03 notebook outputs.
+The classification and NER values below come from the saved Lab02 reports and
+Lab03 notebook outputs.
 
 | Lab   | Task                     | Model                        | Test accuracy | Test F1 | F1 averaging              |
 | ----- | ------------------------ | ---------------------------- | ------------: | ------: | ------------------------- |
@@ -116,6 +140,22 @@ The complete Lab02 comparison and Lab03 experiment outputs are available in the
 [Lab02 results summary](Lab02/README.md) and
 [Lab03 notebook](Lab03/24520689.ipynb).
 
+### Lab04 translation results
+
+All three models completed 10 epochs in the recorded run, with epoch 10 selected
+for each model. ROUGE-L F1 uses a 0–1 scale; BLEU uses a 0–100 scale.
+
+| Model | Dev ROUGE-L F1 | Test ROUGE-L F1 | Test BLEU |
+| ----- | ------------: | -------------: | --------: |
+| LSTM without attention | 0.2308 | 0.2350 | 2.6231 |
+| LSTM + Luong attention | **0.3021** | **0.3164** | **6.0928** |
+| LSTM + Bahdanau attention | 0.2988 | 0.3128 | 5.5817 |
+
+Luong performed best in this recorded run. The small gap from Bahdanau has not
+been evaluated across multiple seeds. Translation samples and Bahdanau attention
+heatmaps remain to be added to the analysis. See the
+[Lab04 report](Lab04/RESULTS.md) for evaluation details and limitations.
+
 ---
 
 ## ⚙️ Tech Stack
@@ -126,16 +166,19 @@ The complete Lab02 comparison and Lab03 experiment outputs are available in the
 - Scikit-learn
 - Hugging Face Transformers
 - Seqeval
+- ROUGE Score and SacreBLEU
 - JupyterLab
 
 ---
 
 ## 🚀 Getting Started
 
-Install the required packages in your Python environment.
+Use Python 3.12 or newer for the current Lab04 source, which reuses quote
+characters inside f-string expressions. Install the packages used across the labs
+in your Python environment.
 
 ```powershell
-python -m pip install torch torchvision scikit-learn numpy pandas matplotlib tqdm transformers seqeval jupyterlab
+python -m pip install torch torchvision scikit-learn numpy pandas matplotlib tqdm transformers seqeval rouge-score sacrebleu jupyterlab
 ```
 
 ### Lab01 and Lab03 notebooks
@@ -195,6 +238,44 @@ training. Once that issue is fixed, its entry point supports
 run downloads pretrained weights and preprocessing configuration from Hugging
 Face. The current status and recorded results are documented in the
 [Lab02 guide](Lab02/README.md).
+
+### Lab04 translation experiments
+
+Prepare the three parallel-text files with this layout. Each file must contain a
+JSON array of objects with `english` and `vietnamese` string fields.
+
+```text
+Lab04/
+├── data/
+│   ├── small-train.json
+│   ├── small-dev.json
+│   └── small-test.json
+├── src/
+│   ├── main.py
+│   ├── preprocessing.py
+│   ├── model.py
+│   ├── engine.py
+│   └── plotting.py
+└── results/
+```
+
+Run the following command from the repository root in PowerShell. It trains all
+three configurations sequentially and selects CUDA when available, otherwise CPU.
+
+```powershell
+python Lab04\src\main.py --epochs 10 --batch-size 32 --output-dir Lab04\results --checkpoint Lab04\checkpoint
+```
+
+The default model uses 256-dimensional embeddings, hidden size 256, three LSTM
+layers, dropout 0.3, Adam with learning rate 0.001, and seed 42. Use `--train-dir`,
+`--dev-dir`, and `--test-dir` to override the input paths.
+
+The command writes `none.pt`, `luong.pt`, and `bahdanau.pt` under
+`Lab04/checkpoint/`, and `learning_curves.png` under `Lab04/results/`. Metrics are
+printed to the console; the script does not automatically create `results.log`.
+Without the explicit output arguments above, checkpoints and plots default to
+`Lab04/src/checkpoint/` and `Lab04/src/results/` respectively. Dataset directories
+and model weight files are excluded from version control by `.gitignore`.
 
 ---
 
